@@ -22,3 +22,10 @@ while (grade != -1)
 Console.WriteLine("Ввод завершён");
 
 
+
+
+int sum = 0;
+int count = 0;
+
+Console.WriteLine("Вводите оценки, для завершения введите -1:");
+int grade = int.Parse(Console.ReadLine());
