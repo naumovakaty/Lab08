@@ -28,7 +28,6 @@ Console.WriteLine("Ввод завершён. Всего введено оцен
 int sum = 0;
 int count1 = 0;
 int maxGrade = 0;
-
 Console.WriteLine("Вводите оценки, для завершения введите -1:");
 int grade = int.Parse(Console.ReadLine());
 if (grade != -1) {
@@ -64,3 +63,38 @@ while (true)
     Console.WriteLine("Неверный пароль, попробуйте снова");
 }
 Console.WriteLine($"Количество неудачных попыток: {count2}");
+
+string answer;
+do
+{
+    Console.Write("Введите дату посещения (например, 01.09): ");
+    string date = Console.ReadLine();
+    Console.WriteLine($"Запись добавлена: {date}");
+
+    Console.Write("Добавить ущу одну запись? (да/нет): ");
+    answer = Console.ReadLine();
+} while (answer == "да");
+
+Console.WriteLine("Дневник сохранен");
+
+Console.WriteLine();
+Console.WriteLine("Задача А");
+int N = 6;
+int i = 1;
+Console.WriteLine($"Таблица умножения на {N}");
+while ( i <= 10)
+{
+    Console.WriteLine($"{N} * {i} = {N * i}");
+    i++;
+}
+Console.WriteLine();
+Console.WriteLine("Задача В");
+int Pages = 0;
+Console.WriteLine("Введите количество прочитанных страниц (для завершения введите -1): ");
+int pages = int.Parse(Console.ReadLine());
+while (pages != -1)
+{
+    Pages += pages;
+    pages = int.Parse(Console.ReadLine());
+}
+Console.WriteLine($"Всего прочитано страниц: {Pages}");
